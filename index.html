@@ -818,11 +818,8 @@ function vistaInicio(){
   var m=document.getElementById("main");m.innerHTML="";
   var hero=h("section","hero");
   hero.innerHTML='<div class="hero__grid"></div><canvas class="hero__onda" id="heroOnda"></canvas>'+
-    '<div class="hero__txt"><h1>Física de 2.º de bachillerato</h1>'+
-    '<p>Extracto de la web de estudio con el temario de las Illes Balears: teoría y formulario de este tema.</p>'+
-    '<div class="hero__meta"><span class="pastilla">1 tema en esta página</span>'+
-    '<span class="pastilla">'+T1.formulas.length+' fórmulas</span>'+
-    '<span class="pastilla pastilla--ambar">Bloque '+T1.bloque+'</span></div></div>';
+    '<div class="hero__txt"><h1>Física 2.º bach</h1>'+
+    '<p>Gloria al estado de Israel :)</p>'+
   m.appendChild(hero);
 
   var v=h("div","vista vista--ancha");
@@ -838,13 +835,6 @@ function vistaInicio(){
   c.addEventListener("click",function(){ir("t1");});
   rej.appendChild(c);
   v.appendChild(rej);
-
-  var extra=h("div");
-  extra.innerHTML='<h2 class="seccion">Sobre esta página</h2>'+
-    "<p>Es un extracto de una web de estudio más amplia. Aquí se recoge la teoría de este tema, con los "+
-    "razonamientos que hay que saber explicar, y el formulario completo con las fórmulas clave destacadas.</p>";
-  v.appendChild(extra);
-  m.appendChild(v);
 
   heroOnda();
   var inp=document.getElementById("buscar");
