@@ -835,7 +835,10 @@ function vistaInicio(){
   c.addEventListener("click",function(){ir("t1");});
   rej.appendChild(c);
   v.appendChild(rej);
-
+  var extra=h("div");
+  extra.innerHTML=
+  v.appendChild(extra);
+  m.appendChild(v);
   heroOnda();
   var inp=document.getElementById("buscar");
   inp.addEventListener("input",function(){buscar(inp.value);});
