@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Física 2º bach Isma</title>
-<meta name="description" content="Física de Isma">
+<title>Física 2º bach</title>
+<meta name="description" content="Física 2º bach">
 <meta name="color-scheme" content="light">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -819,7 +819,10 @@ function vistaInicio(){
   var hero=h("section","hero");
   hero.innerHTML='<div class="hero__grid"></div><canvas class="hero__onda" id="heroOnda"></canvas>'+
     '<div class="hero__txt"><h1>Física 2.º bach</h1>'+
-    '<p>Gloria al estado de Israel :)</p>'
+    '<p>Gloria al estado de Israel :)</p>'+
+    '<div class="hero__meta"><span class="pastilla">1 tema en esta página</span>'+
+    '<span class="pastilla">'+T1.formulas.length+' fórmulas</span>'+
+    '<span class="pastilla pastilla--ambar">Bloque '+T1.bloque+'</span></div></div>';
   m.appendChild(hero);
 
   var v=h("div","vista vista--ancha");
@@ -835,15 +838,13 @@ function vistaInicio(){
   c.addEventListener("click",function(){ir("t1");});
   rej.appendChild(c);
   v.appendChild(rej);
-  v.appendChild(extra);
-  m.appendChild(v);
 
-   var extra=h("div");
+  var extra=h("div");
   extra.innerHTML='<h2 class="seccion"></h2>'+
     "<p></p>";
   v.appendChild(extra);
   m.appendChild(v);
-  
+
   heroOnda();
   var inp=document.getElementById("buscar");
   inp.addEventListener("input",function(){buscar(inp.value);});
